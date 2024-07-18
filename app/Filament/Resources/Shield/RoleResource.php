@@ -33,7 +33,7 @@ class RoleResource extends Resource implements HasShieldPermissions
             'delete_any',
         ];
     }
-
+   protected static ?string $tenantOwnershipRelationshipName = 'team';
     public static function form(Form $form): Form
     {
         return $form
