@@ -1,5 +1,5 @@
 # Usa una imagen base de PHP con Apache
-FROM php:8.1-apache
+FROM php:8.2-apache
 
 # Instala las extensiones necesarias para Laravel
 RUN docker-php-ext-install pdo pdo_mysql
