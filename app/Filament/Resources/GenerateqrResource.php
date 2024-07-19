@@ -30,7 +30,7 @@ class GenerateqrResource extends Resource
         return ('QR para iniciar session con Whatsapp');
     }
 
-    //oculta el boton de crear si ya existe un registro en la tabla / esto esta bueno
+    //oculta el boton de crear si ya existe un registro en la tabla
     public static function canCreate(): bool
     {
         return Generateqr::count() === 0;
