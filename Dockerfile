@@ -1,5 +1,5 @@
 # Usa una imagen base de PHP con Apache
-FROM php:8.2-apache
+FROM php:8.1-apache
 
 # Instala las extensiones necesarias para Laravel
 RUN docker-php-ext-install pdo pdo_mysql
@@ -15,6 +15,9 @@ RUN mkdir -p /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Establece los permisos adecuados para el directorio de almacenamiento y caché
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Configura el ServerName para evitar advertencias
+RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 # Exponer el puerto 80
 EXPOSE 80
