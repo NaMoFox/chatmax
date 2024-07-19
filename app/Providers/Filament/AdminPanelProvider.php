@@ -89,7 +89,7 @@ class AdminPanelProvider extends PanelProvider
             ->sidebarCollapsibleOnDesktop()
             ->maxContentWidth(MaxWidth::Full)
             ->spa()
-            ->profile();
+            ;
            }
 
 }
